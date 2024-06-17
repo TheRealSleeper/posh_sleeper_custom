@@ -1,0 +1,64 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+      {
+        "alignment": "left",
+        "segments": [
+          {
+            "background": "#ffffff",
+            "foreground": "#100e23",
+            "leading_diamond": "\ue0b6",
+            "style": "diamond",
+            "template": "{{ .UserName }} ",
+            "type": "session"
+          },
+          {
+            "background": "#91ddff",
+            "foreground": "#100e23",
+            "powerline_symbol": "\ue0b0",
+            "properties": {
+              "style": "agnoster",
+              "folder_separator_icon": " \ue0b1 ", 
+              "home_icon": "\ueb06"
+            },
+            "style": "powerline",
+            "template": " {{ .Path }} ",
+            "type": "path"
+          },
+          {
+            "background": "#95ffa4",
+            "foreground": "#193549",
+            "powerline_symbol": "\ue0b0",
+            "style": "powerline",
+            "template": " {{ .HEAD }} ",
+            "type": "git"
+          },
+          {
+            "background": "#FF6471",
+            "foreground": "#ffffff",
+            "leading_diamond": "<transparent,background>\ue0b0</>",
+            "style": "diamond",
+            "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
+            "trailing_diamond": "\ue0b4",
+            "type": "python"
+          },
+          {
+            "background": "#575656",
+            "foreground": "#d6deeb",
+            "properties": {
+              "style": "roundrock",
+              "threshold": 0
+            },
+            "style": "diamond",
+            "template": " {{ .FormattedMs }} ",
+            "trailing_diamond": "\ue0b0",
+            "type": "executiontime"
+          }
+        ],
+        "type": "prompt"
+      }
+    ],
+    "final_space": true,
+    "version": 2
+  }
+  
